@@ -5,7 +5,13 @@
 }
 
 #feature-description {
-    font-size: 3vh;
+    font-size: 2vh;
     text-align: center;
     font-weight: lighter;
+}
+.feature-banner{
+  height: 400px;
+}
+.feature-banner-img{
+  height: 100%;
 }
