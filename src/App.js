@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 import ModuleHeader from './Components/Header';
-import ModuleFooter from './Components/Footer';
 import ModuleFeaturesSection from './Components/Features';
+import ModuleMoreSection from './Components/More';
+import ModuleFooter from './Components/Footer';
+
 
 class App extends Component {
   render() {
@@ -11,6 +13,7 @@ class App extends Component {
       <div>
         <ModuleHeader></ModuleHeader>
         <ModuleFeaturesSection></ModuleFeaturesSection>
+        <ModuleMoreSection></ModuleMoreSection>
         <ModuleFooter></ModuleFooter>
       </div>
     );
