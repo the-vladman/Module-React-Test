@@ -1,0 +1,20 @@
+#pricing-title{
+    text-align: center;
+    font-variant: small-caps;
+}
+
+#pricing-description {
+    text-align: center;
+    font-weight: lighter;
+}
+
+#pricing-value {
+    font-size: 5vh;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#pricing-value-u {
+    text-align: center;
+    font-weight: lighter;
+}
