@@ -9,7 +9,7 @@ class More extends Component {
   companiesCatalog(){
     const catalog = ['company1','company2','company3','company4','company5','company6'];
     return(
-      <Grid container justify="center">
+      <Grid container justify="center" id='more-companies'>
         {
           catalog.map(company => {
             return (
@@ -25,17 +25,17 @@ class More extends Component {
 
   render() {
     return (
-      <div>
+      <div className='module-more' id='module-more-section'>
         <Grid container justify="center">
           <Grid item md={6}>
               <p id='more-title'>The Ultimate Pasta Length Editor</p>
-              <p id='more-description'>How to boost the design and developing process with a little help of</p>
-              <p id='more-description'>four paws. True stort by Snoop Dogg</p>
+              <p className='more-description-text' id='more-description'>How to boost the design and developing process with a little help of</p>
+              <p className='more-description-text' id='more-description-2'>four paws. True stort by Snoop Dogg</p>
           </Grid>
         </Grid>
         <Grid container justify="center">
-          <Grid item md={1}>
-            <Button variant="contained">Try it for Free</Button>
+          <Grid id='try-button-content' item md={1}>
+            <Button id='try-button' variant="contained">Try it for Free</Button>
           </Grid>
         </Grid>
         <Grid container justify="center">
@@ -44,7 +44,7 @@ class More extends Component {
           </Grid>
         </Grid>
         <Grid container justify="center">
-          <Grid item md={10}>
+          <Grid item md={8}>
             {this.companiesCatalog()}
           </Grid>
         </Grid>
