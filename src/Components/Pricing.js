@@ -59,19 +59,19 @@ class Pricing extends Component {
     let element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {text}</p>
     switch (text) {
       case 'Gb of space':
-        element = <p id='pricing-feature-text'><Icon id='pricing-icon' id='pricing-icon'>done</Icon> {`${price.space} ${text}`}</p>
+        element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {`${price.space} ${text}`}</p>
         break;
       case 'days of file recovery':
-        element = <p id='pricing-feature-text'><Icon id='pricing-icon' id='pricing-icon'>done</Icon> {`${price.days} ${text}`}</p>
+        element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {`${price.days} ${text}`}</p>
         break;
       case 'Unlimited third-party integrations':
         if (price.value < 8.99) {
-          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon' id='pricing-icon'></Icon>{text}</p>
+          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon'></Icon>{text}</p>
         }
         break;
       case 'Remote wipe':
         if (price.value < 18.98) {
-          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon' id='pricing-icon'></Icon>{text}</p>
+          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon'></Icon>{text}</p>
         }
         break;
       default:
