@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import ModuleHeader from './Components/Header';
-import ModuleFeaturesSection from './Components/Features';
+import ModuleLandingSection from './Components/Landing';
 import ModuleFooter from './Components/Footer';
 import ModuleMoreSection from './Components/More';
 import ModulePricingSection from './Components/Pricing';
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div>
         <ModuleHeader></ModuleHeader>
-        <ModuleFeaturesSection></ModuleFeaturesSection>
+        <ModuleLandingSection></ModuleLandingSection>
         <ModuleSlider></ModuleSlider>
         <ModulePricingSection></ModulePricingSection>
         <ModuleMoreSection></ModuleMoreSection>
