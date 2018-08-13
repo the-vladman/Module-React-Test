@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './More.css';
 
-import Content from './FooterContent';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
@@ -14,7 +13,7 @@ class More extends Component {
         {
           catalog.map(company => {
             return (
-              <Grid item md={2}>
+              <Grid key={company} item md={2}>
                 <img id='more-company-img' alt={company} src={`${process.env.PUBLIC_URL}/imgs/${company}.png`}></img>
               </Grid>
             )
