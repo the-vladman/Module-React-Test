@@ -19,7 +19,7 @@ class Header extends Component {
     });
 
     return (
-      <AppBar position="static" color="default">
+      <AppBar position="sticky" color="default">
         <Toolbar>
           Module
           <div className='header-menu'>
