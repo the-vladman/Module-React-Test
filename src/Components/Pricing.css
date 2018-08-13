@@ -1,11 +1,44 @@
-#pricing-title{
-    text-align: center;
-    font-variant: small-caps;
+.pricing-section{
+    background: #F9F9F9;
 }
 
-#pricing-description {
+#pricing-title {
+    font-size: 6vh;
     text-align: center;
     font-weight: lighter;
+    margin-top: 100px;
+}
+
+.pricing-description-text {
+    font-size: 2.7vh;
+    text-align: center;
+    font-weight: lighter;
+    color: #ACB1B8;
+}
+
+#pricing-feature-text {
+    color: black;
+}
+
+#pricing-feature-text-disabled {
+    color: #D9DEE2;
+}
+
+#pricing-description-2 {
+    margin-top: -1pc;
+}
+
+#pricing-feature-title{
+    text-align: center;
+    font-variant: small-caps;
+    color: #3C92D8;
+    font-weight: bold;
+}
+
+#pricing-feature-description {
+    text-align: center;
+    font-weight: lighter;
+    color: #ACB1B8;
 }
 
 #pricing-value {
@@ -14,7 +47,28 @@
     font-weight: lighter;
 }
 
+#pricing-icon {
+    color: #7DC855;
+}
+
 #pricing-value-u {
     text-align: center;
     font-weight: lighter;
+    margin-top: -2.5pc;
+}
+
+#pricing-value-description {
+    text-align: center;
+    font-weight: lighter;
+    color: #ACB1B8;
+}
+
+.pricing-papers{
+    position: relative;
+    top: 10pc;
+}
+
+.pricing-button {
+    padding-top: 3pc;
+    padding-bottom: 2pc;
 }

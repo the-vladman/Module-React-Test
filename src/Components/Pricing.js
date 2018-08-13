@@ -12,7 +12,7 @@ class Pricing extends Component {
   pricingPaper(price){
     return(
       <Grid item md={4} key={price.id}>
-        <Paper elevation={1}>
+        <Paper className='pricing-papers' elevation={1}>
           {this.pricingTitle(price)}
           {this.pricingDivider()}
           {this.pricingValue(price)}
@@ -38,8 +38,8 @@ class Pricing extends Component {
     return(
       <Grid container justify="center">
         <Grid item md={8}>
-            <p id='pricing-title'>{price.name}</p>
-            <p id='pricing-description'>{price.resume}</p>
+            <p id='pricing-feature-title'>{price.name}</p>
+            <p id='pricing-feature-description'>{price.resume}</p>
         </Grid>
       </Grid>
     )
@@ -50,28 +50,28 @@ class Pricing extends Component {
         <Grid item md={10}>
             <p id='pricing-value'>${price.value}</p>
             <p id='pricing-value-u'>{price.value > 0 ? 'per month' : 'always free'}</p>
-            { price.description.map(d => {return <p key={d} id='pricing-description'>{d}</p>}) }
+            { price.description.map(d => {return <p key={d} id='pricing-value-description'>{d}</p>}) }
         </Grid>
       </Grid>
     )
   }
   pricingFeaturesText(text, price){
-    let element = <p id='pricing-text'><Icon>done</Icon> {text}</p>
+    let element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {text}</p>
     switch (text) {
       case 'Gb of space':
-        element = <p id='pricing-text'><Icon>done</Icon> {`${price.space} ${text}`}</p>
+        element = <p id='pricing-feature-text'><Icon id='pricing-icon' id='pricing-icon'>done</Icon> {`${price.space} ${text}`}</p>
         break;
       case 'days of file recovery':
-        element = <p id='pricing-text'><Icon>done</Icon> {`${price.days} ${text}`}</p>
+        element = <p id='pricing-feature-text'><Icon id='pricing-icon' id='pricing-icon'>done</Icon> {`${price.days} ${text}`}</p>
         break;
       case 'Unlimited third-party integrations':
         if (price.value < 8.99) {
-          element = <p id='pricing-text-disabled'><Icon></Icon>{text}</p>
+          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon' id='pricing-icon'></Icon>{text}</p>
         }
         break;
       case 'Remote wipe':
         if (price.value < 18.98) {
-          element = <p id='pricing-text-disabled'><Icon></Icon>{text}</p>
+          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon' id='pricing-icon'></Icon>{text}</p>
         }
         break;
       default:
@@ -98,10 +98,9 @@ class Pricing extends Component {
 
   pricingButton(price){
     return(
-      <Grid container justify='center'>
+      <Grid container justify='center' className='pricing-button'>
         <Grid item md={10}>
           <Button fullWidth variant="contained">Get Started</Button>
-          <p></p>
         </Grid>
       </Grid>
     )
@@ -138,12 +137,12 @@ class Pricing extends Component {
       days: 90,
     }];
     return (
-      <div>
+      <div id='module-pricing-section' className='pricing-section'>
         <Grid container justify="center">
           <Grid item md={6}>
-              <p id='more-title'>Simple Pricing</p>
-              <p id='more-description'>It seems from the moment you begin to take your love of astronomy</p>
-              <p id='more-description'>seriously, the thing that is on mind is what kind.</p>
+              <p id='pricing-title'>Simple Pricing</p>
+              <p class='pricing-description-text' id='pricing-description'>It seems from the moment you begin to take your love of astronomy</p>
+              <p class='pricing-description-text' id='pricing-description-2'>seriously, the thing that is on mind is what kind.</p>
           </Grid>
         </Grid>
         <Grid container justify="center">
