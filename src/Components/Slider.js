@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 class Slider extends Component {
   render() {
     return (
-      <div>
+      <div id='module-features-section'>
         <img id='slider-item-img' alt={`${process.env.PUBLIC_URL}/imgs/features.png`} src={`${process.env.PUBLIC_URL}/imgs/features.png`}></img>
         <Grid container justify="center">
           <Grid item md={10}>
