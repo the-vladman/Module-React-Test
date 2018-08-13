@@ -1,0 +1,24 @@
+#landing-title{
+    font-size: 6vh;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 100px;
+}
+
+.landing-description-text {
+    font-size: 2.7vh;
+    text-align: center;
+    font-weight: lighter;
+    color: #ACB1B8;
+}
+
+#landing-description-2 {
+  margin-top: -1pc;
+}
+.landing-banner{
+  margin-top: 3pc;
+  height: 400px;
+}
+.landing-banner-img{
+  height: 100%;
+}

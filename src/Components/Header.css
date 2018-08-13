@@ -1,3 +1,23 @@
-.header-menu{
+.module-header{
+  height: 100px;
+}
+
+.header-button{
+  color: #ACB1B8 !important;
+  text-transform: capitalize !important;
+}
+
+.header-menu {
+  padding-top: 35px;
   margin-left: 30px;
+}
+
+
+.header-title {
+  font-size: 2.6vh;
+  padding-top: 14px;
+  font-weight: 500;
+}
+.header-sup {
+  font-size: 1.2vh;
 }
