@@ -9,7 +9,7 @@ import Icon from '@material-ui/core/Icon';
 class FooterContent extends Component {
   infoFooterItem(icon,description) {
     return (
-      <Grid container>
+      <Grid container spacing={40}>
         <Grid item md={2}>
           <img id='footer-item-img' alt={icon} src={`${process.env.PUBLIC_URL}/imgs/${icon}`}></img>
         </Grid>
