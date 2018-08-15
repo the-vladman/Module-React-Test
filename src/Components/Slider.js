@@ -1,20 +1,30 @@
 import React, {Component} from 'react';
 import './Slider.css';
 
-import Content from './FooterContent';
+import Icon from '@material-ui/core/Icon';
+import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Slide from '@material-ui/core/Slide';
 
 class Slider extends Component {
   render() {
     return (
-      <div id='module-features-section'>
-        <img id='slider-item-img' alt={`${process.env.PUBLIC_URL}/imgs/features.png`} src={`${process.env.PUBLIC_URL}/imgs/features.png`}></img>
-        <Grid container justify="center">
-          <Grid item md={10}>
-            <h1>ssdds</h1>
-          </Grid>
-        </Grid>
-      </div>
+    <Grid container justify="center">
+      <Grid item md={1}>
+        <IconButton aria-label="to back">
+          <Icon>arrow_back_ios</Icon>
+        </IconButton>
+      </Grid>
+      <Grid item md={10}>
+
+      </Grid>
+      <Grid item md={1}>
+        <IconButton aria-label="to forward">
+          <Icon>arrow_forward_ios</Icon>
+        </IconButton>
+      </Grid>
+    </Grid>
     );
   }
 }
