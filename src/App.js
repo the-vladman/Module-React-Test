@@ -6,7 +6,7 @@ import ModuleLandingSection from './Components/Landing';
 import ModuleFooter from './Components/Footer';
 import ModuleMoreSection from './Components/More';
 import ModulePricingSection from './Components/Pricing';
-import ModuleSlider from './Components/Slider';
+import ModuleFeatures from './Components/Features';
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
       <div>
         <ModuleHeader></ModuleHeader>
         <ModuleLandingSection></ModuleLandingSection>
-        <ModuleSlider></ModuleSlider>
+        <ModuleFeatures></ModuleFeatures>
         <ModulePricingSection></ModulePricingSection>
         <ModuleMoreSection></ModuleMoreSection>
         <ModuleFooter></ModuleFooter>

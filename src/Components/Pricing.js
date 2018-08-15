@@ -141,8 +141,8 @@ class Pricing extends Component {
         <Grid container justify="center">
           <Grid item md={6}>
               <p id='pricing-title'>Simple Pricing</p>
-              <p class='pricing-description-text' id='pricing-description'>It seems from the moment you begin to take your love of astronomy</p>
-              <p class='pricing-description-text' id='pricing-description-2'>seriously, the thing that is on mind is what kind.</p>
+              <p className='pricing-description-text' id='pricing-description'>It seems from the moment you begin to take your love of astronomy</p>
+              <p className='pricing-description-text' id='pricing-description-2'>seriously, the thing that is on mind is what kind.</p>
           </Grid>
         </Grid>
         <Grid container justify="center">
