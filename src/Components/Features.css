@@ -1,3 +1,10 @@
 #features-item-img{
-  position: absolute;
+  position: relative;
+  width: 100%;
+  left: -15pc;
+}
+
+.module-features {
+  padding-top: 300px;
+  padding-bottom: 50px;
 }
