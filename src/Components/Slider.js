@@ -15,7 +15,7 @@ class Slider extends Component {
     direction: 'left',
     toRight: true,
     toLeft: false,
-    sliderElements: [{ id: 1, title: 'Powerful Extensions', description:['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: true }, { id: 2, title: 'Powerful Extensions', description:['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: false, }, { id: 3, title: 'TPowerful Extensions', description:['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: false, }]
+    sliderElements: [{ id: 1, title: 'Powerful Extensions 1', link: 'linkToElement', description: ['This article is floated online with an aim to help 2', 'you find the best dvd printing solution. Dvd', 'printing is'], active: true }, { id: 2, title: 'Powerful Extensions 2', link: 'linkToElement', description: ['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: false, }, { id: 3, title: 'TPowerful Extensions3', link: 'linkToElement', description: ['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: false, }, { id: 4, title: 'TPowerful Extensions4', link: 'linkToElement', description: ['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: false, }, { id: 5, title: 'TPowerful Extensions5', link: 'linkToElement', description: ['This article is floated online with an aim to help', 'you find the best dvd printing solution. Dvd', 'printing is'], active: false, }]
   };
 
   handleChange = (toRight) => {
@@ -34,38 +34,65 @@ class Slider extends Component {
       pivot: newPivot,
       sliderElements: newArray,
     })
+    this.verifyElements(newPivot);
   };
 
-  paperDynamic = (element) =>{    
-    return(
-      <Grow key={element.id} in={element.active} mountOnEnter unmountOnExit>
-        <Paper elevation={0}>
-          <h1>{element.title}</h1>
-        </Paper>
-      </Grow>
-    );
+  verifyElements = (newPivot) => {
+    newPivot < 2 ? this.setState({ toLeft: false }): this.setState({ toLeft: true });
+
+    if (newPivot === this.state.sliderElements.length) {
+      this.setState({ toRight: false })
+    } else {
+      this.setState({ toRight: true })
+    }
+  };
+
+  paperDynamic = (element) =>{
+    if (element.active) {
+      return (
+        <Grow key={element.id} in={element.active} mountOnEnter unmountOnExit>
+          <Paper elevation={0}>
+            <p id='slider-title'>{element.title}</p>
+            {
+              element.description.map(d => {
+                return <p id='slider-description' key={d}>{d}</p>
+              })
+            }
+            <p id='slider-link'>Learn more <Icon>arrow_forward_ios</Icon></p>
+          </Paper>
+        </Grow>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  circlePagination = (active) =>{
+    return(this.state.sliderElements.map(e =>{
+      return( active == e.id ? <span className='dot' id='active'></span> : <span className='dot' id='inactive'></span>);
+    })
+  );
   };
 
   render() {
-    const { sliderElements } = this.state;
+    const { sliderElements, toLeft, toRight, pivot } = this.state;
     return (
     <Grid container justify="center">
       <Grid item md={1}>
-        <IconButton aria-label="to back">
-            <Icon onClick={this.handleChange.bind(this, false)}>arrow_back_ios</Icon>
-        </IconButton>
+          {toLeft ? <IconButton id='slider-button' onClick={this.handleChange.bind(this, false)} aria-label="to back"><Icon fontSize='inherit'>arrow_back_ios</Icon></IconButton>: null }
       </Grid>
       <Grid item md={10}>
-        {
-          sliderElements.map(element =>{
-            return this.paperDynamic(element)
-          })
-        }
+        <div className='slider-content'>
+          {
+            sliderElements.map(element => {
+              return this.paperDynamic(element)
+            })
+          }
+          {this.circlePagination(pivot)}
+        </div>
       </Grid>
       <Grid item md={1}>
-        <IconButton aria-label="to forward">
-            <Icon onClick={this.handleChange.bind(this, true)}>arrow_forward_ios</Icon>
-        </IconButton>
+          {toRight ? <IconButton id='slider-button' onClick={this.handleChange.bind(this, true)} aria-label="to forward"><Icon fontSize='inherit'>arrow_forward_ios</Icon></IconButton>:null }
       </Grid>
     </Grid>
     );
