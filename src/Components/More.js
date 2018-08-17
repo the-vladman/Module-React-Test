@@ -43,7 +43,7 @@ class More extends Component {
               <p id='more-pasta'>Superpasta trusted and used by multiple companies</p>
           </Grid>
         </Grid>
-        <Grid container justify="center">
+        <Grid container justify="center" alignItems='center'>
           <Grid item md={8}>
             {this.companiesCatalog()}
           </Grid>

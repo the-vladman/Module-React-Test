@@ -69,7 +69,7 @@ class Slider extends Component {
 
   circlePagination = (active) =>{
     return(this.state.sliderElements.map(e =>{
-      return( active == e.id ? <span className='dot' id='active'></span> : <span className='dot' id='inactive'></span>);
+      return( active === e.id ? <span key={e.id} className='dot' id='active'></span> : <span key={e.id} className='dot' id='inactive'></span>);
     })
   );
   };

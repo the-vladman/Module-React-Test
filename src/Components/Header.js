@@ -14,7 +14,7 @@ class Header extends Component {
           <Grid container justify="center">
             <Grid item md={10} xs={12} sm={12}>
               <Grid container>
-                <Grid item md={1}>
+                <Grid item md={2}>
                   <p className='header-title'>module <sup className='header-sup'>02</sup></p>
                 </Grid>
                 <Grid item md={8}>
