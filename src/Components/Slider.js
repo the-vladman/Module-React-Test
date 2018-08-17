@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Grow from '@material-ui/core/Grow';
+import Hidden from '@material-ui/core/Hidden';
 
 class Slider extends Component {
 
@@ -53,12 +54,14 @@ class Slider extends Component {
         <Grow key={element.id} in={element.active} mountOnEnter unmountOnExit>
           <Paper elevation={0}>
             <p id='slider-title'>{element.title}</p>
-            {
-              element.description.map(d => {
-                return <p id='slider-description' key={d}>{d}</p>
-              })
-            }
-            <p id='slider-link'>Learn more <Icon>arrow_forward_ios</Icon></p>
+            <Hidden only='xs'>
+              {
+                element.description.map(d => {
+                  return <p id='slider-description' key={d}>{d}</p>
+                })
+              }
+            </Hidden>
+            <p id='slider-link'>Learn more <Icon id='slider-link'>arrow_forward_ios</Icon></p>
           </Paper>
         </Grow>
       );
@@ -78,10 +81,10 @@ class Slider extends Component {
     const { sliderElements, toLeft, toRight, pivot } = this.state;
     return (
     <Grid container justify="center">
-      <Grid item md={1}>
+      <Grid item xs={1} sm={1} md={1}>
           {toLeft ? <IconButton id='slider-button' onClick={this.handleChange.bind(this, false)} aria-label="to back"><Icon fontSize='inherit'>arrow_back_ios</Icon></IconButton>: null }
       </Grid>
-      <Grid item md={10}>
+      <Grid item xs={8} sm={10} md={10}>
         <div className='slider-content'>
           {
             sliderElements.map(element => {
@@ -91,7 +94,7 @@ class Slider extends Component {
           {this.circlePagination(pivot)}
         </div>
       </Grid>
-      <Grid item md={1}>
+      <Grid item xs={1} sm={1} md={1}>
           {toRight ? <IconButton id='slider-button' onClick={this.handleChange.bind(this, true)} aria-label="to forward"><Icon fontSize='inherit'>arrow_forward_ios</Icon></IconButton>:null }
       </Grid>
     </Grid>

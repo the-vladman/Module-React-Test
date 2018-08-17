@@ -46,3 +46,17 @@
   width: .5vh;
   margin-top: -10px;
 }
+
+@media (max-width: 600px) {
+  #slider-title {
+    font-size: 2vh;
+  }
+  #slider-link {
+    font-size: 2vh;
+  }
+
+  #slider-button {
+    margin-top: 2pc;
+    font-size: 2pc;
+  }
+}
