@@ -56,3 +56,37 @@
     /* Safari 3-8 */
     transform: scale(1.5);
 }
+
+@media (max-width: 960px) {
+    #landing-item-title {
+        font-size: 1vh;
+        margin-top: 2.5pc;
+    }
+
+    #more-pasta {
+        font-size: 2pc;
+    }
+
+    #more-company-img {
+        margin-top: 60px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #landing-item-title {
+        font-size: 1vh;
+        margin-top: 2.5pc;
+    }
+    #more-pasta {
+        font-size: 2pc;
+    }
+    #more-company-img {
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    #try-button {
+        font-size: 4vh;
+    }
+}

@@ -20,3 +20,25 @@
 .header-sup {
   font-size: 1.2vh;
 }
+
+
+#header-icon-img{
+  width: 70%;
+}
+
+.menu-container{
+  padding-top: 3pc;
+}
+
+@media (max-width: 960px) {
+  .menu-container {
+    padding-top: 2vh;
+  }
+
+  .header-button {
+    font-size: 1.5vh !important;
+  }
+  .module-header {
+    height: 110px;
+  }
+}

@@ -22,3 +22,10 @@
 .landing-banner-img{
   height: 100%;
 }
+
+
+@media (max-width: 960px) {
+  .landing-banner {
+     margin-top: 0pc;
+  }
+}

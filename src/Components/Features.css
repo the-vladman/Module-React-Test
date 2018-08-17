@@ -8,3 +8,15 @@
   padding-top: 300px;
   padding-bottom: 50px;
 }
+
+@media (max-width: 960px) {
+  .module-features {
+    padding-top: 100px;
+    /* padding-bottom: 50px; */
+  }
+
+  #features-item-img {
+    width: 200%;
+    left: -9pc;
+  }
+}
