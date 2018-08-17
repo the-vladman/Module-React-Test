@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Icon from '@material-ui/core/Icon';
+import Hidden from '@material-ui/core/Hidden';
 
 class FooterContent extends Component {
   infoFooterItem(icon,description) {
@@ -22,10 +23,10 @@ class FooterContent extends Component {
   linkFooterItem(title, elements) {
     return (
       <Grid container  justify="center">
-        <Grid item md={10}>
+        <Grid item xs={10} sm={10} md={10}>
           <p id='footer-link-title'>{title}</p>
           {
-            elements.map(element => {return <p key={element}>{element}</p>})
+            elements.map(element => { return <p id='footer-link-description' key={element}>{element}</p>})
           }
         </Grid>
     </Grid>
@@ -34,13 +35,13 @@ class FooterContent extends Component {
   linksFooterItems() {
     return (
       <Grid container>
-        <Grid item md={4}>
+        <Grid item xs={4} sm={4} md={4}>
           {this.linkFooterItem('Support', ['About Us','Press','FAQ'])}
         </Grid>
-        <Grid item md={4}>
+        <Grid item xs={4} sm={4} md={4}>
           {this.linkFooterItem('Bussiness', ['Home','Mobile','Pricing'])}
         </Grid>
-        <Grid item md={4}>
+        <Grid item xs={4} sm={4} md={4}>
           {this.linkFooterItem('Community', ['Developers','Referrals','Forum'])}
         </Grid>
     </Grid>
@@ -49,7 +50,7 @@ class FooterContent extends Component {
   languajeFooterItem() {
     return (
       <Grid container  justify="center">
-        <Grid item md={4}>
+        <Grid item xs={4} sm={4} md={4}>
             <Select displayEmpty>
               <MenuItem><Icon>language</Icon>English (UK)</MenuItem>
             </Select>
@@ -59,14 +60,16 @@ class FooterContent extends Component {
 
   render() {
     return (
-      <Grid container>
-        <Grid item md={4}>
-          {this.infoFooterItem('logo.png','Huge modern UI Kit containing 130+ terrific components in 11 popular categories. Each components is fully.')}
-        </Grid>
-        <Grid item md={4}>
+      <Grid container justify='center'>
+        <Hidden only={['xs', 'sm']}>
+          <Grid item  sm={10}md={4}>
+            {this.infoFooterItem('logo.png','Huge modern UI Kit containing 130+ terrific components in 11 popular categories. Each components is fully.')}
+          </Grid>
+        </Hidden>
+        <Grid item xs={10} sm={10} md={4}>
           {this.linksFooterItems()}
         </Grid>
-        <Grid item md={4}>
+        <Grid item xs={10} sm={10} md={4}>
           {this.languajeFooterItem()}
         </Grid>
     </Grid>
