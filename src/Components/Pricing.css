@@ -2,7 +2,7 @@
     background: #F9F9F9;
 }
 
-#pricing-title {
+.pricing-title {
     font-size: 6vh;
     text-align: center;
     font-weight: lighter;
@@ -16,50 +16,54 @@
     color: #ACB1B8;
 }
 
-#pricing-feature-text {
+.pricing-feature-text {
     color: black;
+    font-size: 1.5pc;
 }
 
-#pricing-feature-text-disabled {
+.pricing-feature-text-disabled {
     color: #D9DEE2;
+    font-size: 1.5pc;
 }
 
-#pricing-description-2 {
+.pricing-description-2 {
     margin-top: -1pc;
 }
 
-#pricing-feature-title{
+.pricing-feature-title{
     text-align: center;
-    font-variant: small-caps;
+    font-size: 2pc;
     color: #3C92D8;
     font-weight: bold;
 }
 
-#pricing-feature-description {
+.pricing-feature-description {
     text-align: center;
+    font-size: 1.5pc;
     font-weight: lighter;
     color: #ACB1B8;
 }
 
-#pricing-value {
+.pricing-value {
     font-size: 5vh;
     text-align: center;
     font-weight: lighter;
 }
 
-#pricing-icon {
+.pricing-icon {
     color: #7DC855;
 }
 
-#pricing-value-u {
+.pricing-value-u {
     text-align: center;
     font-weight: lighter;
-    margin-top: -2.5pc;
+    margin-top: -3pc;
 }
 
-#pricing-value-description {
+.pricing-value-description {
     text-align: center;
     font-weight: lighter;
+    font-size: 1.5pc;
     color: #ACB1B8;
 }
 
@@ -68,7 +72,55 @@
     top: 10pc;
 }
 
-.pricing-button {
+.pricing-button-container {
     padding-top: 3pc;
     padding-bottom: 2pc;
+}
+
+.pricing-button {
+    background: white !important;
+    color: #3C92D8 !important;
+    font-weight: bold !important;
+}
+
+.pricing-papers:hover{
+    background: #3C92D8;
+}
+
+.pricing-papers:hover .pricing-feature-title {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-feature-description {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-value {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-value-u {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-value {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-feature-text {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-feature-text-disabled {
+    color: #ACB1B8;
+}
+
+.pricing-papers:hover .pricing-value-description {
+    color: white;
+}
+
+.pricing-papers:hover .pricing-button {
+    background: #7DC855 !important;
+    color:white !important;
+    font-weight: bold !important;
 }

@@ -1,3 +1,48 @@
 #slider-item-img{
   position: absolute;
 }
+
+#slider-title {
+  font-size: 3vh;
+  font-weight: lighter;
+}
+
+#slider-description {
+  color: #ACB1B8;
+  font-size: 1.3vh;
+  margin-top: -.5vh;
+}
+
+#slider-link {
+  color: #3C92D8;
+  font-size: 2pc;
+  font-weight: bold;
+}
+
+.slider-content{
+  /* height: 800px; */
+}
+
+#slider-button{
+  margin-top: 6pc;
+  font-size: 2.5pc;
+}
+
+.dot {
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#active{
+  background-color:#3C92D8;
+  height: 1vh;
+  width: 1vh;
+  
+}
+#inactive {
+  background-color: #ACB1B8;
+  height: .5vh;
+  width: .5vh;
+  margin-top: -10px;
+}

@@ -38,8 +38,8 @@ class Pricing extends Component {
     return(
       <Grid container justify="center">
         <Grid item md={8}>
-            <p id='pricing-feature-title'>{price.name}</p>
-            <p id='pricing-feature-description'>{price.resume}</p>
+            <p className='pricing-feature-title'>{price.name}</p>
+            <p className='pricing-feature-description'>{price.resume}</p>
         </Grid>
       </Grid>
     )
@@ -48,30 +48,30 @@ class Pricing extends Component {
     return(
       <Grid container justify="center">
         <Grid item md={10}>
-            <p id='pricing-value'>${price.value}</p>
-            <p id='pricing-value-u'>{price.value > 0 ? 'per month' : 'always free'}</p>
-            { price.description.map(d => {return <p key={d} id='pricing-value-description'>{d}</p>}) }
+            <p className='pricing-value'>${price.value}</p>
+            <p className='pricing-value-u'>{price.value > 0 ? 'per month' : 'always free'}</p>
+            { price.description.map(d => {return <p key={d} className='pricing-value-description'>{d}</p>}) }
         </Grid>
       </Grid>
     )
   }
   pricingFeaturesText(text, price){
-    let element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {text}</p>
+    let element = <p className='pricing-feature-text'><Icon className='pricing-icon'>done</Icon> {text}</p>
     switch (text) {
       case 'Gb of space':
-        element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {`${price.space} ${text}`}</p>
+        element = <p className='pricing-feature-text'><Icon className='pricing-icon'>done</Icon> {`${price.space} ${text}`}</p>
         break;
       case 'days of file recovery':
-        element = <p id='pricing-feature-text'><Icon id='pricing-icon'>done</Icon> {`${price.days} ${text}`}</p>
+        element = <p className='pricing-feature-text'><Icon className='pricing-icon'>done</Icon> {`${price.days} ${text}`}</p>
         break;
       case 'Unlimited third-party integrations':
         if (price.value < 8.99) {
-          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon'></Icon>{text}</p>
+          element = <p className='pricing-feature-text-disabled'><Icon className='pricing-icon'></Icon>{text}</p>
         }
         break;
       case 'Remote wipe':
         if (price.value < 18.98) {
-          element = <p id='pricing-feature-text-disabled'><Icon id='pricing-icon'></Icon>{text}</p>
+          element = <p className='pricing-feature-text-disabled'><Icon className='pricing-icon'></Icon>{text}</p>
         }
         break;
       default:
@@ -96,11 +96,11 @@ class Pricing extends Component {
     )
   }
 
-  pricingButton(price){
+  pricingButton(){
     return(
-      <Grid container justify='center' className='pricing-button'>
+      <Grid container justify='center' className='pricing-button-container'>
         <Grid item md={10}>
-          <Button fullWidth variant="contained">Get Started</Button>
+          <Button fullWidth variant="contained" className='pricing-button'>Get Started</Button>
         </Grid>
       </Grid>
     )
@@ -140,9 +140,9 @@ class Pricing extends Component {
       <div id='module-pricing-section' className='pricing-section'>
         <Grid container justify="center">
           <Grid item md={6}>
-              <p id='pricing-title'>Simple Pricing</p>
-              <p className='pricing-description-text' id='pricing-description'>It seems from the moment you begin to take your love of astronomy</p>
-              <p className='pricing-description-text' id='pricing-description-2'>seriously, the thing that is on mind is what kind.</p>
+              <p className='pricing-title'>Simple Pricing</p>
+              <p className='pricing-description-text pricing-description'>It seems from the moment you begin to take your love of astronomy</p>
+              <p className='pricing-description-text pricing-description-2'>seriously, the thing that is on mind is what kind.</p>
           </Grid>
         </Grid>
         <Grid container justify="center">

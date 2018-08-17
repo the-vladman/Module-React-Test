@@ -7,11 +7,11 @@ class LandingItems extends Component {
 
   landingItem(icon, title, description) {
     return (
-      <Grid container spacing={8}>
+      <Grid className='landing-item' container spacing={8}>
         <Grid item md={2}>
           <img id='landing-item-img' alt={icon} src={`${process.env.PUBLIC_URL}/imgs/${icon}`}></img>
         </Grid>
-        <Grid item md={10}>
+        <Grid item md={8}>
           <p id='landing-item-title'>{title}</p>
           <p id='landing-item-text' >{description}</p>
         </Grid>
@@ -20,7 +20,7 @@ class LandingItems extends Component {
 
   render() {
     return (
-    <Grid className='landing-item' container>
+    <Grid className='landing-items' container>
       <Grid item md={4}>
         {this.landingItem('icon1.png', 'Keep your Data', 'Enterprise-ready performance and controls')}
       </Grid>
