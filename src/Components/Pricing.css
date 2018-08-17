@@ -124,3 +124,42 @@
     color:white !important;
     font-weight: bold !important;
 }
+
+@media (max-width: 960px) {
+    .pricing-feature-title {
+        font-size: 3vh;
+    }
+
+    .pricing-feature-description {
+        font-size: 1.5vh;
+    }
+    
+    .pricing-value-u{
+        font-size: 1.5vh;
+    }
+
+    .pricing-button {
+        font-size: 2pc !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-feature-title {
+        font-size: 5vh;
+    }
+    .pricing-feature-description {
+        font-size: 3vh;
+    }
+    .pricing-value-u {
+        font-size: 2vh;
+        margin-top: -1pc;
+    }
+
+    .pricing-value {
+        font-size: 8vh;
+    }
+
+    .pricing-button {
+        font-size: 3vh !important;
+    }
+}

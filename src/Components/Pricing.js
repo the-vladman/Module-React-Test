@@ -6,18 +6,21 @@ import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
 
 class Pricing extends Component {
 
   pricingPaper(price){
     return(
-      <Grid item md={4} key={price.id}>
+      <Grid item xs={12} md={4} key={price.id}>
         <Paper className='pricing-papers' elevation={1}>
           {this.pricingTitle(price)}
           {this.pricingDivider()}
           {this.pricingValue(price)}
           {this.pricingDivider()}
-          {this.pricingFeatures(price)}
+          <Hidden only={['xs', 'sm']}>
+            {this.pricingFeatures(price)}
+          </Hidden>
           {this.pricingButton()}
         </Paper>
       </Grid>
@@ -27,7 +30,7 @@ class Pricing extends Component {
   pricingDivider(){
     return(
       <Grid container justify="center">
-        <Grid item md={10}>
+        <Grid item xs={10} md={10}>
           <Divider />
         </Grid>
       </Grid>
@@ -37,7 +40,7 @@ class Pricing extends Component {
   pricingTitle(price){
     return(
       <Grid container justify="center">
-        <Grid item md={8}>
+        <Grid item xs={12} md={8}>
             <p className='pricing-feature-title'>{price.name}</p>
             <p className='pricing-feature-description'>{price.resume}</p>
         </Grid>
@@ -47,10 +50,12 @@ class Pricing extends Component {
   pricingValue(price){
     return(
       <Grid container justify="center">
-        <Grid item md={10}>
+        <Grid item xs={12} sm={10} md={10}>
             <p className='pricing-value'>${price.value}</p>
             <p className='pricing-value-u'>{price.value > 0 ? 'per month' : 'always free'}</p>
+          <Hidden only={['xs', 'sm']}>
             { price.description.map(d => {return <p key={d} className='pricing-value-description'>{d}</p>}) }
+          </Hidden>
         </Grid>
       </Grid>
     )
@@ -99,7 +104,7 @@ class Pricing extends Component {
   pricingButton(){
     return(
       <Grid container justify='center' className='pricing-button-container'>
-        <Grid item md={10}>
+        <Grid item xs={10} md={10}>
           <Button fullWidth variant="contained" className='pricing-button'>Get Started</Button>
         </Grid>
       </Grid>
@@ -139,14 +144,16 @@ class Pricing extends Component {
     return (
       <div id='module-pricing-section' className='pricing-section'>
         <Grid container justify="center">
-          <Grid item md={6}>
+          <Grid item xs={12} sm={10} md={6}>
               <p className='pricing-title'>Simple Pricing</p>
+            <Hidden only={['xs', 'sm']}>
               <p className='pricing-description-text pricing-description'>It seems from the moment you begin to take your love of astronomy</p>
               <p className='pricing-description-text pricing-description-2'>seriously, the thing that is on mind is what kind.</p>
+            </Hidden>
           </Grid>
         </Grid>
         <Grid container justify="center">
-          <Grid item md={10}>
+          <Grid item xs={10} sm={10} md={10}>
             <Grid container>
               {
                 prices.map(price =>{return this.pricingPaper(price)})
