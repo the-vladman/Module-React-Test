@@ -1,0 +1,33 @@
+.landing-items {
+  margin-top: 3pc;
+}
+
+#landing-item-img{
+  margin-top: 30px;
+}
+
+#landing-item-text{
+  font-weight: lighter;
+  font-size: 2vh;
+  margin-top: -1pc;
+}
+#landing-item-title{
+  font-size: 2.5vh;
+  font-weight:normal;
+}
+
+
+.landing-item:hover{
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+}
+
+@media (max-width: 960px) {
+  #landing-item-title {
+    font-size: 1vh;
+    margin-top: 2.5pc;
+  }
+}

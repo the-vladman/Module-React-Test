@@ -1,0 +1,44 @@
+.module-header{
+  height: 100px;
+}
+
+.header-button{
+  color: #ACB1B8 !important;
+  text-transform: capitalize !important;
+}
+
+.header-menu {
+  margin-top: 35px;
+}
+
+
+.header-title {
+  font-size: 2.6vh;
+  margin-top: 30px;
+  font-weight: 500;
+}
+.header-sup {
+  font-size: 1.2vh;
+}
+
+
+#header-icon-img{
+  width: 70%;
+}
+
+.menu-container{
+  padding-top: 3pc;
+}
+
+@media (max-width: 960px) {
+  .menu-container {
+    padding-top: 2vh;
+  }
+
+  .header-button {
+    font-size: 1.5vh !important;
+  }
+  .module-header {
+    height: 110px;
+  }
+}
