@@ -24,3 +24,10 @@
   /* Safari 3-8 */
   transform: scale(1.2);
 }
+
+@media (max-width: 960px) {
+  #landing-item-title {
+    font-size: 1vh;
+    margin-top: 2.5pc;
+  }
+}
