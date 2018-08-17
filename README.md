@@ -2,8 +2,7 @@
 
 This project was generated with [Facebook Create React App](https://github.com/facebook/create-react-app)
 
-## 1.- Clone repo `https://github.com/the-vladman/Module-React-Test`
-
+## 1.- Clone repo
   `git clone https://github.com/the-vladman/Module-React-Test.git`
   
 ## 2.- Install Dependencies
